@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.opencsv.bean.CsvToBeanBuilder;
@@ -20,6 +21,9 @@ public class LoadMovieCsvBean implements InitializingBean {
 	
 	private final MovieService movieService;
 	
+	@Value("${data.file.path}")
+	private String dataFilePath;
+	
 	@Autowired
 	public LoadMovieCsvBean(MovieService movieService) {
 		this.movieService = movieService;
@@ -31,7 +35,7 @@ public class LoadMovieCsvBean implements InitializingBean {
 	}
 	
 	public void loadCsv() throws IOException {
-		try (FileReader fileReader = new FileReader(CSV_NAME)) {
+		try (FileReader fileReader = new FileReader(this.dataFilePath + CSV_NAME)) {
 			List<MovieCSV> moviesCsv = new CsvToBeanBuilder<MovieCSV>(fileReader)
 					.withType(MovieCSV.class)
 					.withSeparator(';')

@@ -1,4 +1,4 @@
-package it.texo;
+package com.raspberry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

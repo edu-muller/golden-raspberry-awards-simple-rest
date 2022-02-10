@@ -15,13 +15,8 @@ public class MovieController {
 	@Autowired
 	private MovieService service;
 	
-//	@GetMapping
-//	public List<Movie> list() {
-//		return repository.findAll();
-//	}
-	
-	@GetMapping("producers/award-intervals")
-	public AwardIntervalDTO awardIntervals() {
+	@GetMapping("producers/awards-intervals")
+	public AwardIntervalDTO awardsIntervals() {
 		return this.service.findAwardInterval();
 	}
 }

@@ -8,11 +8,11 @@
 		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>it.texo</groupId>
-	<artifactId>texo-it</artifactId>
+	<groupId>award</groupId>
+	<artifactId>golden-raspberry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>texo-it</name>
-	<description>Desafio Texo IT</description>
+	<name>golden-raspberry-award</name>
+	<description>Golden Raspberry Award</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -72,5 +72,14 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<activateProperties>dev</activateProperties>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
