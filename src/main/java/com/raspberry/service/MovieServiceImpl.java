@@ -1,4 +1,4 @@
-package com.raspberry.repository;
+package com.raspberry.service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.raspberry.dto.AwardIntervalDTO;
 import com.raspberry.dto.ProducerAwardDTO;
 import com.raspberry.model.Movie;
+import com.raspberry.repository.MovieRepository;
 
 @Service
 @Transactional(propagation = Propagation.SUPPORTS)

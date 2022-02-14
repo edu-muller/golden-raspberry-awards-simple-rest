@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import com.opencsv.bean.CsvToBeanBuilder;
 import com.raspberry.model.Movie;
 import com.raspberry.parser.csv.MovieCSV;
-import com.raspberry.repository.MovieService;
+import com.raspberry.service.MovieService;
 
 @Component
 public class LoadMovieCsvBean implements InitializingBean {

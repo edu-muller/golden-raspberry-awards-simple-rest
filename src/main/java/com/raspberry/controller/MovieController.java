@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.raspberry.dto.AwardIntervalDTO;
-import com.raspberry.repository.MovieService;
+import com.raspberry.service.MovieService;
 
 @RestController
 @RequestMapping("movies")

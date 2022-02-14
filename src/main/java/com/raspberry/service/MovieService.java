@@ -1,4 +1,4 @@
-package com.raspberry.repository;
+package com.raspberry.service;
 
 import java.util.List;
 
