@@ -42,11 +42,10 @@ public class MovieServiceImpl implements MovieService {
 		mapMoviesProducer.forEach((p, ms) -> {
 			Movie previous = null;
 			for (Movie m : ms) {
-				if (previous == null) {
-					previous = m;
-				} else {
+				if (previous != null) {
 					producerAwardDto.add(new ProducerAwardDTO(p, m.getYear() - previous.getYear(), previous.getYear(), m.getYear()));
 				}
+				previous = m;
 			}
 		});
 		
